@@ -24,20 +24,10 @@ public class Door : MonoBehaviour
         if (status == DoorStatus.open)
         {
             transform.position = Vector2.Lerp(transform.position, targetPosition, Time.deltaTime * 4);
-
-
         }
         else if (status == DoorStatus.close)
         {
-            //if (currentY <= defaultY)
-            //{
-            //    currentY += moveSpeed * Time.deltaTime;
-            //    transform.position = new Vector3(transform.position.x, currentY, transform.position.z);
-            //}
-            //else
-            //{
-            //    status = DoorStatus.close;
-            //}
+            transform.position = Vector2.Lerp(transform.position, defaultPosition, Time.deltaTime * 4);
         }
     }
 

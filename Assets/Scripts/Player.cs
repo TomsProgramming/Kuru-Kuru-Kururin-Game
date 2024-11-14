@@ -4,19 +4,11 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D m_Rigidbody;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    [SerializeField] private float spinningSpeed;
 
     private void FixedUpdate()
     {
-        m_Rigidbody.rotation += 5f;
+        m_Rigidbody.rotation += spinningSpeed;
 
         if (Input.GetAxis("Horizontal") > 0)
         {
